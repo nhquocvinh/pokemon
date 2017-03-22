@@ -2,9 +2,14 @@
   'use strict';
 
   angular.module('meetIrl', [
-    'ui.router'
-  ])
-  .config(function($urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
-  });
+      'ui.router',
+      'api.users',
+      'api.pokemon',
+      'components.users',
+      'components.profile',
+      'components.missingno'
+    ])
+    .config(function($urlRouterProvider) {
+      $urlRouterProvider.otherwise('/users');
+    });
 })();
