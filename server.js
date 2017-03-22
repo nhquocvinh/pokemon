@@ -18,6 +18,8 @@ app.use(morgan('dev'));
 
 app.use(express.static(__dirname + '/app'));
 
+app.use('/favicon.ico', express.static('./app/favicon.ico'));
+
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
